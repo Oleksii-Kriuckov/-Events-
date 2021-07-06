@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change text's color </title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+        .text {
+            display: flex;
+        }
+        article {
+            width: 30%;
+            margin: 20px auto;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, at repudiandae officiis delectus enim   ipsa qui alias iusto doloremque labore deleniti possimus tempora, suscipit cupiditate ab similique sunt quas  dignissimos.
+        Assumenda, neque vel porro rerum velit voluptate sit adipisci esse eligendi ullam veniam amet quae fugit alias labore blanditiis earum tenetur, sapiente excepturi molestiae magnam doloribus fuga. Voluptates, alias distinctio!
+        Explicabo suscipit enim alias, voluptatum commodi illum nulla accusantium tenetur eum deleniti architecto iusto in adipisci accusamus sequi blanditiis, eius laborum perspiciatis, placeat ut. Dolor dignissimos libero esse commodi voluptates.
+        Voluptate quos, accusamus repellat beatae neque quis deserunt fugit minima, omnis debitis error tempora. Placeat ducimus illo sit qui, inventore facere, laudantium, repudiandae libero blanditiis eos sed quas dolorem? Laborum.
+        Enim aperiam ipsam eaque ullam magnam, unde voluptatibus numquam voluptatum dignissimos veniam officiis recusandae? Expedita commodi ab rerum, impedit, repellendus delectus architecto laborum tempore illo tenetur cum officiis ex sed?</article>
+        <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, at repudiandae officiis delectus enim ipsa qui alias iusto doloremque labore deleniti possimus tempora, suscipit cupiditate ab similique sunt quas dignissimos.
+        Assumenda, neque vel porro rerum velit voluptate sit adipisci esse eligendi ullam veniam amet quae fugit alias labore blanditiis earum tenetur, sapiente excepturi molestiae magnam doloribus fuga. Voluptates, alias distinctio!
+        Explicabo suscipit enim alias, voluptatum commodi illum nulla accusantium tenetur eum deleniti architecto iusto in adipisci accusamus sequi blanditiis, eius laborum perspiciatis, placeat ut. Dolor dignissimos libero esse commodi voluptates.
+        Voluptate quos, accusamus repellat beatae neque quis deserunt fugit minima, omnis debitis error tempora. Placeat ducimus illo sit qui, inventore facere, laudantium, repudiandae libero blanditiis eos sed quas dolorem? Laborum.
+        Enim aperiam ipsam eaque ullam magnam, unde voluptatibus numquam voluptatum dignissimos veniam officiis recusandae? Expedita commodi ab rerum, impedit, repellendus delectus architecto laborum tempore illo tenetur cum officiis ex sed?</article>
+        <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, at repudiandae officiis delectus enim ipsa qui alias iusto doloremque labore deleniti possimus tempora, suscipit cupiditate ab similique sunt quas dignissimos.
+        Assumenda, neque vel porro rerum velit voluptate sit adipisci esse eligendi ullam veniam amet quae fugit alias labore blanditiis earum tenetur, sapiente excepturi molestiae magnam doloribus fuga. Voluptates, alias distinctio!
+        Explicabo suscipit enim alias, voluptatum commodi illum nulla accusantium tenetur eum deleniti architecto iusto in adipisci accusamus sequi blanditiis, eius laborum perspiciatis, placeat ut. Dolor dignissimos libero esse commodi voluptates.
+        Voluptate quos, accusamus repellat beatae neque quis deserunt fugit minima, omnis debitis error tempora. Placeat ducimus illo sit qui, inventore facere, laudantium, repudiandae libero blanditiis eos sed quas dolorem? Laborum.
+        Enim aperiam ipsam eaque ullam magnam, unde voluptatibus numquam voluptatum dignissimos veniam officiis recusandae? Expedita commodi ab rerum, impedit, repellendus delectus architecto laborum tempore illo tenetur cum officiis ex sed?</article> 
+    </div>
+       
+
+    <script>
+        const text = document.querySelector(".text");
+        const body = document.querySelector("body");
+/* */
+        body.onkeydown = function (e) {
+            if (e.keyCode == 82) {}
+            text.style.color = "red";
+            
+            if (e.keyCode == 71) {
+                text.style.color = "green";
+            }
+            if (e.keyCode == 66) {
+                text.style.color = "blue";
+            }
+        }
+
+/*
+        body.onkeypress = function (e) {
+            if (e.keyCode == 114) {
+                text.style.color = "red";
+            }
+            if (e.keyCode == 103) {
+                text.style.color = "green";
+            }
+            if (e.keyCode == 98) {
+                text.style.color = "blue";
+            }
+        }
+*/
+    </script>
+</body>
+</html>
