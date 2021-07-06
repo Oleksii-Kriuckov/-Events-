@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Combination</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+        .message {
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 30px auto;
+            transition: .9s;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>При нажатии комбинации клавиш Ctrl+S, Ctrl+A, Ctrl+Shift+S всплывает сообщение с указанием команд, которые соответствуют даннным клавишам</p>
+
+    <script>
+        const body = document.querySelector("body");
+    
+        const createMessage = () => {
+            message = document.createElement("div");
+            message.classList.add("message");
+            body.append(message);
+        }
+
+        const removeMessage = () => body.removeChild(message);
+
+        document.addEventListener("keydown", function (e) {
+            if (e.shiftKey && e.ctrlKey && e.keyCode == 83) {
+                createMessage();
+                message.innerHTML = "Cохранено всё";
+                e.preventDefault();
+                setTimeout(removeMessage, 2000);
+            } else if (e.ctrlKey && e.keyCode == 83) {
+                createMessage();
+                message.innerHTML = "Cохранено";
+                e.preventDefault();
+                setTimeout(removeMessage, 2000);
+            }
+
+            if (e.ctrlKey && e.keyCode == 65) {
+                createMessage();
+                message.innerHTML = "Выбрано всё";
+                e.preventDefault();
+                setTimeout(removeMessage, 2000);
+            }
+        }
+        )
+        
+    </script>
+</body>
+</html>
